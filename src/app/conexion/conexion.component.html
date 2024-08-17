@@ -1,0 +1,13 @@
+<p  style="text-align: center; margin-top: 5%; font-size: 20px; font-weight: bold;">CONNEXION</p>
+<div class="container">
+    <form >
+      <label  for="fname">Your email</label>
+      <input type="email" id="fname" required [(ngModel)]="email"  name="email" placeholder="Your email">
+  
+      <label for="lname">Your password</label>
+      <input type="password" id="lname" required [(ngModel)]="password" name="password" placeholder="Your last password">
+  
+      <input type="submit"  (click)="  login()" value="Submit">
+    </form>
+  </div>
+  

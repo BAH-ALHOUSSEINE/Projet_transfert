@@ -1,0 +1,30 @@
+<p  style="text-align: center; margin-top: 5%; font-size: 20px; font-weight: bold;">SINSCRIRE</p>
+<div class="container">
+    <form >
+       
+
+      <label  for="fname">Your name</label>
+      <input type="text" id="fname" required [(ngModel)]="client.nomClient" name="nom" placeholder="Your name">
+
+      <label  for="fname">Your second name</label>
+      <input type="text" id="fname" required [(ngModel)]="client.prenomClient" name="prenom" placeholder="Your second name">
+
+      <label  for="fname">Your phone</label>
+      <input type="text" id="fname" required [(ngModel)]="client.telClient" name="telphone" placeholder="Your phone">
+
+
+      <label  for="fname">Your email</label>
+      <input type="email" id="fname" required [(ngModel)]="client.emailClient" name="email" placeholder="Your email">
+
+      <label for="lname">Your birth day</label>
+      <input type="date" id="lname" required  [(ngModel)]="client.dateNaissance" name="datenaissance" placeholder="Your birth days">
+  
+      <label for="lname">Your password</label>
+      <input type="password" id="lname" required [(ngModel)]="client.passwordClient" name="password" placeholder="Your last password">
+
+      <label for="lname">confirm Your password</label>
+      <input type="password" id="lname" required  [(ngModel)]="client.passwordconf" name="confirmpassword" placeholder="confirm your  password">
+  
+      <input type="submit" value="Submit">
+    </form>
+  </div>
