@@ -4,6 +4,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { ConexionComponent } from './conexion/conexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { BeneficiareComponent } from './beneficiare/beneficiare.component';
 
 
 
@@ -11,10 +12,11 @@ import { InscriptionComponent } from './inscription/inscription.component';
 const routes: Routes = [
   
   
-  {path: "acceuil/connexion", component : ConexionComponent},
-  {path: "acceuil/inscription", component : InscriptionComponent},
+  {path: "connexion", component : ConexionComponent},
+  {path: "inscription", component : InscriptionComponent},
   {path: "acceuil", component : AcceuilComponent},
   {path: "contact", component : ContactComponent},
+  {path: "beneficiaire", component : BeneficiareComponent},
   {path: "", redirectTo: "acceuil", pathMatch: "full" }
 ];
 

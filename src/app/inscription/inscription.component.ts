@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Client } from '../model/client';
 import { ServiceclientService } from '../service/services/serviceclient.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inscription',
@@ -10,12 +11,15 @@ import { ServiceclientService } from '../service/services/serviceclient.service'
 export class InscriptionComponent {
   client: Client = new Client();
 
-  constructor(private clientService: ServiceclientService) {}
+  constructor(private clientService: ServiceclientService , private router: Router) {}
 
   register() {
-    this.clientService.register(this.client).subscribe(response => {
-      console.log('Client registered:', response);
+    this.clientService.register(this.client).subscribe(reponse =>{
+          console.log(reponse);
+          this.router.navigate(['/acceuil']);
     });
+  
+    }
   }
-}
+
 

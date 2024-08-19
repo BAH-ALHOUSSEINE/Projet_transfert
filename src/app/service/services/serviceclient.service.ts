@@ -1,28 +1,54 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/internal/Observable';
+import { Observable } from 'rxjs';
 import { Client } from '../../model/client';
-import { BrowserModule } from '@angular/platform-browser';
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceclientService {
 
-  private apiUrl = 'http://localhost:3000/clients';
+  private baseUrl = 'http://localhost:8080/Transfert/client'; 
+  // Base URL for the API
+   private  client :  Client = new Client ();
+
 
   constructor(private http: HttpClient) { }
 
-  register(client: Client): Observable<Client> {
-    return this.http.post<Client>(`${this.apiUrl}/register`, client);
-  }
 
-  login(email: string, password: string): Observable<Client> {
-    return this.http.post<Client>(`${this.apiUrl}/login`, { email, password });
-  }
-
-  getClients(): Observable<Client[]> {
-    return this.http.get<Client[]>(this.apiUrl);
+  getclient(): Client {
+    return this.client;
   }
   
+  setClient (client : Client) : void {
+     this.client=client;
+  }
+
+  // Method to register a new client
+  register(client: Client): Observable<Client> {
+    const url = `${this.baseUrl}/register`;
+    return this.http.post<Client>(url, client, httpOptions);
+  }
+
+  // Method to login with email and password
+  login(email: string, password: string): Observable<Client> {
+    const url = `${this.baseUrl}/login`;
+    const body = { emailClient: email, password };
+    console.log('Request body:', body); // Affiche le corps de la requête
+  return this.http.post<Client>(url, body, httpOptions);
+  }
+
+  // Method to get all clients (assuming this endpoint exists)
+  getClients(): Observable<Client[]> {
+    const url = `${this.baseUrl}/clients`;
+    return this.http.get<Client[]>(url);
+  }
+
+
+
+
 }

@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ConexionComponent } from './conexion/conexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BeneficiareComponent } from './beneficiare/beneficiare.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     ContactComponent,
     ConexionComponent,
     InscriptionComponent,
+    BeneficiareComponent,
 
 
   

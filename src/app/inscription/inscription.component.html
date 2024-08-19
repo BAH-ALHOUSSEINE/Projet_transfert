@@ -17,14 +17,14 @@
       <input type="email" id="fname" required [(ngModel)]="client.emailClient" name="email" placeholder="Your email">
 
       <label for="lname">Your birth day</label>
-      <input type="date" id="lname" required  [(ngModel)]="client.dateNaissance" name="datenaissance" placeholder="Your birth days">
+      <input type="date" id="fname" required  [(ngModel)]="client.dateNaissance" name="datenaissance" placeholder="Your birth days">
   
       <label for="lname">Your password</label>
-      <input type="password" id="lname" required [(ngModel)]="client.passwordClient" name="password" placeholder="Your last password">
+      <input type="password" id="fname" required [(ngModel)]="client.passwordClient" name="password" placeholder="Your last password">
 
       <label for="lname">confirm Your password</label>
-      <input type="password" id="lname" required  [(ngModel)]="client.passwordconf" name="confirmpassword" placeholder="confirm your  password">
+      <input type="password" id="fname" required  [(ngModel)]="client.passwordconf" name="confirmpassword" placeholder="confirm your  password">
   
-      <input type="submit" value="Submit">
+      <input type="submit"  (click)="register()" value="Submit">
     </form>
   </div>

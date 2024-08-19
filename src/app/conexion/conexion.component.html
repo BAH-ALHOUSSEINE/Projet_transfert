@@ -1,5 +1,6 @@
 <p  style="text-align: center; margin-top: 5%; font-size: 20px; font-weight: bold;">CONNEXION</p>
 <div class="container">
+     <div *ngIf="loginerreur===-1" style="color: red; text-align: center; background-color: brown; border-radius: 10px; padding: 5%;"> login ou mot de pass incorrect </div>
     <form >
       <label  for="fname">Your email</label>
       <input type="email" id="fname" required [(ngModel)]="email"  name="email" placeholder="Your email">
