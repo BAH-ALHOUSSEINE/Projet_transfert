@@ -12,43 +12,35 @@ const httpOptions = {
 })
 export class ServiceclientService {
 
-  private baseUrl = 'http://localhost:8080/Transfert/client'; 
+  private baseUrl1 = 'http://localhost:8080/Transfert/client'; 
   // Base URL for the API
-   private  client :  Client = new Client ();
+  
 
 
   constructor(private http: HttpClient) { }
 
 
-  getclient(): Client {
-    return this.client;
-  }
-  
-  setClient (client : Client) : void {
-     this.client=client;
-  }
 
   // Method to register a new client
   register(client: Client): Observable<Client> {
-    const url = `${this.baseUrl}/register`;
+    const url = `${this.baseUrl1}/register`;
     return this.http.post<Client>(url, client, httpOptions);
   }
 
   // Method to login with email and password
   login(email: string, password: string): Observable<Client> {
-    const url = `${this.baseUrl}/login`;
-    const body = { emailClient: email, password };
+    const url = `${this.baseUrl1}/login`;
+    const body = { emailClient: email, passwordClient : password };
     console.log('Request body:', body); // Affiche le corps de la requête
   return this.http.post<Client>(url, body, httpOptions);
   }
 
-  // Method to get all clients (assuming this endpoint exists)
-  getClients(): Observable<Client[]> {
-    const url = `${this.baseUrl}/clients`;
-    return this.http.get<Client[]>(url);
+  getcleint(idClient : number): Observable<Client> {
+    const url = `${this.baseUrl1}/getclient`;
+    
+    // Affiche le corps de la requête
+  return this.http.post<Client>(url, idClient, httpOptions);
   }
-
-
 
 
 }

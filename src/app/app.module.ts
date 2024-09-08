@@ -13,6 +13,9 @@ import { ConexionComponent } from './conexion/conexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BeneficiareComponent } from './beneficiare/beneficiare.component';
+import { TransfertComponent } from './transfert/transfert.component';
+import { CheicktransfertComponent } from './cheicktransfert/cheicktransfert.component';
+import { TransfertconfirmationComponent } from './transfertconfirmation/transfertconfirmation.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { BeneficiareComponent } from './beneficiare/beneficiare.component';
     ConexionComponent,
     InscriptionComponent,
     BeneficiareComponent,
+    TransfertComponent,
+    CheicktransfertComponent,
+    TransfertconfirmationComponent,
 
 
   

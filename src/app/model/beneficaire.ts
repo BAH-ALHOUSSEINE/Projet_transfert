@@ -4,7 +4,7 @@ export class Beneficaire {
 
     idBeneficiaire  ? : number ;
     nomBeneficiaire ? : String;
-    preomBeneficiaire ? : String;
+    prenomBeneficiaire ? : String;
     telBeneficiaire ? : number;
     adresseBeneficiaire ? : String;
     clientid ? : Client;

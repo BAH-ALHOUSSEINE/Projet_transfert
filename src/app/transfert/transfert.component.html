@@ -1,0 +1,36 @@
+
+<p style=" text-align:  center; margin-top: 5%;"> Bonjour MR  on vous souhaite la Bienvenu sur notre site de transfert</p>
+<p  style="text-align: center; margin-top: 5%; font-size: 20px; font-weight: bold;"></p>
+
+
+
+
+<div class="container">
+    <form  method="post">
+        <!-- Champ pour saisir la somme du transfert -->
+        <label for="amount">Somme Transfert</label>
+        <input type="text" id="amount"  [(ngModel)]="transfert.sommeTransfert"  name="amount" placeholder="Somme transfert" required>
+
+        <!-- Sélection du bénéficiaire -->
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Ajouter un beneficiaire</label>
+            
+
+            <select class="form-control form-control-lg" id="idCat" name="idbenef" [(ngModel)]="idbenef">
+                <option *ngFor="let benef of beneficiaire" [value]="benef.idBeneficiaire">
+                    {{"NOM: "+benef.nomBeneficiaire}}
+                    {{" PRENOM :   " +benef.prenomBeneficiaire}}
+                    {{" TEL :  " +benef.telBeneficiaire}}
+
+                    
+                </option>
+            </select>
+        </div> 
+
+        <!-- Bouton de soumission -->
+        <br><br>
+        <input type="submit"   (click)="Ajouter_transfert()" value="AJOUTER TRANSFERT">
+    </form>
+</div>
+
+

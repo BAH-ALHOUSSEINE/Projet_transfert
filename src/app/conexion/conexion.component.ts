@@ -31,21 +31,15 @@ export class ConexionComponent {
          // Stocker les informations de l'utilisateur dans la session
          sessionStorage.setItem('clientName', response.nomClient ? response.nomClient.toString() : '');
          sessionStorage.setItem('clientEmail', response.emailClient ? response.emailClient.toString() : '');
-         
-
+         sessionStorage.setItem('idclient', response.idClient ? response.idClient.toString() : '');
+        
     //   this.onLoginSuccess(response);
         this.router.navigate(['/beneficiaire']);
        
       }
       
-    
-      
     });
   }
 
-  onLoginSuccess(userName: Client): void {
-    // Stocker le nom de l'utilisateur dans le service
-    this.clientService.setClient(userName);
-  }
 
 }

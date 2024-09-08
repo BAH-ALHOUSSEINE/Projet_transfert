@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que le wrapper prend au moins 100% de la hauteur de la vue */
+  }
+  
+  .content {
+    flex: 1; /* Prend l'espace restant pour pousser le footer vers le bas */
+  }
+  
+  .footer {
+    background-color: #006400;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  

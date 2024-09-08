@@ -1,0 +1,4 @@
+/* Ajuster la marge inférieure du contenu principal pour laisser la place au footer */
+body {
+    margin-bottom: 100000000%; /* Ajuste cette valeur selon la hauteur de ton footer */
+}
